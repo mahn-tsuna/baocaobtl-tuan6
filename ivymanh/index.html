@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet " href="./app.css"/>
+
+</head>
+<LINK rel="SHOUTCUT ICON" href="/ivymanh/anh/logo-app.png">
+<body>
+    <header>
+        <div class="logo">
+            <img src="anh/logo.png">
+        </div>
+        <div class="menu">
+
+
+
+            <li><a href="">NỮ</a>
+                <ul class="sub-menu">
+                    <li><a href=" ">Hàng mới về</a></li>
+                    <li><a href=" ">TOM AND JJELY</a></li>
+                    <li><a href="">Áo</a>
+                        <ul>
+                            <li><a href=" ">Áo sơ mi</a></li>
+                            <li><a href=" ">Áo thun</a></li>
+                            <li><a href=" ">Áo len</a></li>
+                            <li><a href=" ">Áo Khoác</a></li>
+                            <li><a href=" ">Áo vese</a></li>
+                            <li><a href=" ">Áo polo</a></li>
+                            <li><a href=" ">Áo phông</a></li>
+                        </ul>
+                    </li>
+                   
+
+                </ul>
+            </li>
+
+
+
+            <li><a href="">NAM</a>
+               <ul class="sub-menu">
+                    <li><a href=" ">Hàng mới về</a></li>
+                    <li><a href=" ">TOM AND JJELY</a></li>
+                    <li><a href="">Quần Nam</a>
+                        <ul>
+                            <li><a href=" ">Quần jean</a></li>
+                            <li><a href=" ">Quần lửng</a></li>
+                            <li><a href=" ">Quần dài</a></li>
+                            <li><a href=" ">Quần khaki</a></li>
+                            <li><a href=" ">Quần Tây</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Dép & Giầy</a>
+                        <ul>
+                            <li><a href=" ">Giầy lười</a></li>
+                            <li><a href=" ">Giầy Âu</a></li>
+                            <li><a href=" ">Dép</a></li>
+                            <li><a href=" ">Tông lào</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Phụ Kiện</a>
+                        <ul>
+                            <li><a href=" ">Phụ Kiện</a></li>
+                            
+                        </ul>
+                    </li>
+              </ul>
+            </li>
+            <li><a href="">TRẺ EM</a></li>
+            <li><a href="">SALE</a></li>
+            <li><a href="">KHẨU TRANG</a></li>
+            <li><a href="">BST</a></li>
+            <li><a href="">THÔNG TIN</a></li>
+        
+            
+        </div>
+        <div class="others">
+            <li> <input placeholder="  Tìm kiếm" type="text"><i class="fas fa-search"> </i></a><img src="./anh/kinhnup.png" > </li>
+            <!-- Thêm danh mục đề xuất sản phẩm tìm kiếm -->
+            <li><a class="fa" href=""></a> <img src="./anh/chuong.png"></li>
+            <li><a class="fa" href=""> </a>  <img src="./anh/xehang.png"></li>
+            <li><a class="fa" href=""></a> <img src="./anh/nguoi.png"></li>
+        </div>
+    </header>
+
+    
+<section id="Slider">
+<div class="slide-contener">
+    <img src="./anh/slide1.jpg">
+    <img src="./anh/slide4.jpg">
+    <img src="./anh/slide5.jpg">
+    <img src="./anh/slide2.jpg">
+    <img src="./anh/slide3.jpg">
+</div>
+</section>
+</body>
+
+<div class="app-container">
+
+    <p>Tải ứng dụng bán hàng</p>
+    <div class="app-google">
+        <img src="./anh/appstore.png" >
+        <img src="./anh/googleplay.png">
+    </div>
+    <p>Nhận bản tin IVY manh</p>
+    <input type="text" placeholder="Nhập thông tin tại đây ">
+</div>
+
+<div class="fooder-top">
+    <li><a href="" ><img src="./anh/img-congthuong.png" alt=""?></a></li>
+    <li><a href="" >Liên hệ</a></li>
+    <li><a href="" >Tuyển dụng</a></li>
+    <li><a href="" >Giới thiệu</a></li>
+    <li>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+    </li>
+</div>
+<div class="footer-center">
+    <p>Công ty cổ phần Mạnh Hùng với số đang kí kinh doanh: 02310458504<br>
+    Địa chỉ đăng kí: Số 51 ngõ 217 Trần Phú Hà Đông Hà Nội- 0387121062 <br>
+    Đặt hàng online : <b>0961266413</b>.
+    </p>
+</div>
+
+
+
+<script>
+    const header=document.querySelector("heard")
+    window.addEventListener("scroll",function(){
+        x= window.pageYOffset
+        if(x>0){
+            header.classList.add("sticky")
+        }
+        else{
+            header.classList.add("sticky")
+        }
+    })
+
+
+
+
+
+    const imgslide=document.querySelectorAll(".slide-contener img")
+    const imgcontener = document.querySelector('.slide-contener')
+    
+    let imgnumber=imgslide.length
+    let index = 0
+    imgslide.forEach(function(image,index){
+        image.style.left=index *100 +"%"
+    })
+    function imgSlide(){
+        index++;
+        console.log(index)
+        if (index >=imgnumber ){index=0}
+        imgcontener.style.left = "-" +index*100 + "%"
+    }
+    setInterval(imgSlide,5000)
+</script>
+
+</html>
